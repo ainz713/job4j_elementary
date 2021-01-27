@@ -13,10 +13,10 @@ public class Defragment {
                 for (int i = index + 1; i < array.length; i++) {
                     if (array[i] != null) {
                         notNullIndex = i;
+                        swap(array, nullIndex, notNullIndex);
                         break;
                     }
                 }
-                swap(array, nullIndex, notNullIndex);
             }
         }
         return array;

@@ -9,10 +9,12 @@ public class Merge {
             right[0] = left[left.length - 1];
             left[left.length - 1] = temp;
         }
-        for (int i = 0; i < rsl.length; i++) {
-            System.arraycopy(left, 0, rsl, 0, left.length);
-            System.arraycopy(right, 0, rsl, left.length, right.length);
-        }
+            for (int j = 0; j < left.length; j++) {
+                rsl[j] = left[j];
+            }
+           for (int k = 0; k < right.length; k++) {
+                rsl[left.length + k] = right[k];
+            }
         return rsl;
     }
 }
